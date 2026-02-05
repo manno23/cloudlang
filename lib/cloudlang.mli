@@ -58,6 +58,9 @@ end
 
 type error = string
 
+val example_closure_program : unit -> Ast.program
+val example_closure_config : unit -> Ir.config
+
 val parse : string -> (Ast.program, error) result
 val typecheck : Ast.program -> (Ast.program, error) result
 val compile : Ast.program -> (Ir.config, error) result
