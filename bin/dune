@@ -1,0 +1,4 @@
+(executable
+ (public_name cloudlang)
+ (name main)
+ (libraries cloudlang))

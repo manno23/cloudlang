@@ -1,0 +1,49 @@
+# Dune build artifacts
+_build/
+*.exe
+*.native
+*.byte
+dune-workspace
+dune-workspace.*
+
+# OCaml compiled files
+*.cmi
+*.cmo
+*.cmx
+*.cmt
+*.cmti
+*.cmxa
+*.cma
+*.cmxs
+*.annot
+
+# OPAM
+*.opam.swp
+.opam/
+.opam-switch/
+
+# Merlin
+.merlin
+
+# Editor files
+*~
+*.swp
+*.swo
+\#*\#
+.\#*
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.*~
