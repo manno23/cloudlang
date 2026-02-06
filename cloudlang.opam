@@ -4,8 +4,8 @@ synopsis: "TypeScript to Cloudflare Worker decomposition compiler"
 maintainer: ["Jason Manning <manno@j9m>"]
 authors: ["Jason Manning <manno@j9m>"]
 license: "GPL-3.0-or-later"
-homepage: "https://github.com/username/reponame"
-bug-reports: "https://github.com/username/reponame/issues"
+homepage: "https://github.com/manno23/cloudlang"
+bug-reports: "https://github.com/manno23/cloudlang/issues"
 depends: [
   "dune" {>= "3.20"}
   "ocaml"
@@ -25,5 +25,5 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/username/reponame.git"
+dev-repo: "git+https://github.com/manno23/cloudlang.git"
 x-maintenance-intent: ["(latest)"]

@@ -27,11 +27,7 @@ type node =
     }
   | BlockStatement of { body : node list }
   | ReturnStatement of { argument : node option }
-  | IfStatement of {
-      test : node;
-      consequent : node;
-      alternate : node option;
-    }
+  | IfStatement of { test : node; consequent : node; alternate : node option }
   | ExpressionStatement of { expression : node }
   | CallExpression of { callee : node; arguments : node list }
   | MemberExpression of { object_ : node; property : node }

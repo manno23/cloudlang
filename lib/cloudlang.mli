@@ -1,9 +1,8 @@
 (** CloudLang: TypeScript -> Cloudflare Worker decomposition compiler.
 
-    Pipeline:
-    1. [analyze]: TypeScript ESTree AST -> scope/closure analysis
-    2. [compile]: analysis result -> IR config (Workers + bindings)
-    3. [generate]: IR config -> output string (wrangler configs + TS scripts) *)
+    Pipeline: 1. [analyze]: TypeScript ESTree AST -> scope/closure analysis 2.
+    [compile]: analysis result -> IR config (Workers + bindings) 3. [generate]:
+    IR config -> output string (wrangler configs + TS scripts) *)
 
 module Ast = Ast
 module Ir = Ir

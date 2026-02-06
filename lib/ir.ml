@@ -11,20 +11,9 @@ type worker = {
   routes : string list;
 }
 
-type durable_object = {
-  class_name : string;
-  script : string;
-}
-
-type r2_bucket = {
-  name : string;
-  location : string;
-}
-
-type d1_database = {
-  name : string;
-  schema : string;
-}
+type durable_object = { class_name : string; script : string }
+type r2_bucket = { name : string; location : string }
+type d1_database = { name : string; schema : string }
 
 type resource =
   | Worker of worker
