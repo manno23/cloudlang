@@ -1,6 +1,13 @@
+type binding =
+  | D1Binding of { name : string; database_id : string }
+  | KVBinding of { name : string; namespace_id : string }
+  | R2Binding of { name : string; bucket_name : string }
+  | ServiceBinding of { name : string; service : string }
+
 type worker = {
   name : string;
   script : string;
+  bindings : binding list;
   routes : string list;
 }
 

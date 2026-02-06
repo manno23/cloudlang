@@ -8,8 +8,6 @@
 (generate_opam_files true)
 (package
  (name cloudlang)
- (synopsis "CF Graph Compiler")
-  (depends
-     stdio
-     menhirLib
-      ocaml))
+ (synopsis "TypeScript to Cloudflare Worker decomposition compiler")
+ (depends
+  ocaml))

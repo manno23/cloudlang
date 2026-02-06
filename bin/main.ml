@@ -1,25 +1,15 @@
-open Cloudlang
-
-let read_file filename =
-  let ch = open_in filename in
-  let s = really_input_string ch (in_channel_length ch) in
-  close_in ch;
-  s
-
 let () =
   if Array.length Sys.argv < 2 then
-    print_endline "Usage: cloudlang <file.cl>"
+    print_endline
+      "Usage: cloudlang <file.ts>\n\n\
+       Decomposes a TypeScript program into Cloudflare Workers.\n\n\
+       Currently expects a JSON ESTree AST on stdin.\n\
+       (Direct .ts parsing via typescript-estree bridge is planned.)"
   else
-    let filename = Sys.argv.(1) in
-    let source = read_file filename in
-    match parse source with
-    | Error e -> Printf.printf "Parse error: %s\n" e
-    | Ok ast ->
-      match typecheck ast with
-      | Error e -> Printf.printf "Type error: %s\n" e
-      | Ok typed_ast ->
-        match compile typed_ast with
-        | Error e -> Printf.printf "Compile error: %s\n" e
-        | Ok ir ->
-          let output = generate ir in
-          print_endline output
+    (* TODO: implement JSON AST ingestion from typescript-estree.
+       For now the CLI is a placeholder; the real pipeline is exercised
+       via the test suite which constructs the AST programmatically. *)
+    let _filename = Sys.argv.(1) in
+    Printf.printf
+      "cloudlang: .ts file parsing not yet implemented.\n\
+       Run `dune runtest` to see the pipeline in action.\n"
